@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Submit Testimony – DLCF FUTIA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #0C2340;
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 10px;
+      border: 2px solid #0C2340;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    h2 {
+      color: #800000;
+    }
+
+    label {
+      display: block;
+      margin: 1rem 0 0.5rem;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #0C2340;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #800000;
+    }
+
+    .success-msg {
+      margin-top: 1rem;
+      font-weight: bold;
+      color: green;
+      display: none;
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 2rem;
+      color: #0C2340;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>💬 Share Your Testimony</h2>
+    <p>Your story can inspire other students on campus.</p>
+
+    <form id="testimonyForm">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" required placeholder="e.g. Joy, 100 Level" />
+
+      <label for="message">Your Testimony</label>
+      <textarea id="message" rows="5" required placeholder="How has DLCF impacted your life?"></textarea>
+
+      <button type="submit">Submit Testimony</button>
+      <p class="success-msg" id="successMsg">✅ Testimony saved successfully!</p>
+    </form>
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+  </div>
+
+  <script>
+    const form = document.getElementById("testimonyForm");
+    const successMsg = document.getElementById("successMsg");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (!name || !message) return;
+
+      const newTestimony = {
+        text: message,
+        author: "– " + name
+      };
+
+      let testimonies = JSON.parse(localStorage.getItem("testimonies") || "[]");
+      testimonies.push(newTestimony);
+      localStorage.setItem("testimonies", JSON.stringify(testimonies));
+
+      form.reset();
+      successMsg.style.display = "block";
+      setTimeout(() => successMsg.style.display = "none", 5000);
+    });
+  </script>
+</body>
+</html>

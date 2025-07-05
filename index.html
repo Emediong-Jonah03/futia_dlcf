@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DLCF FUTIA – Encounter. Grow. Belong.</title>
+
+  <!-- SEO & Social Sharing -->
+  <meta name="description" content="Official website of Deeper Life Campus Fellowship FUTIA. Encounter Christ. Grow in faith. Belong to a family.">
+  <meta property="og:title" content="DLCF FUTIA – Encounter. Grow. Belong.">
+  <meta property="og:description" content="Join a vibrant student fellowship. Weekly Bible studies, retreats, and spiritual growth.">
+  <meta property="og:image" content="https://yourdomain.com/assets/preview.jpg">
+  <meta property="og:url" content="https://yourdomain.com/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Favicon & Styles -->
+  <link rel="icon" href="assets/favicon-dlcf.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="general.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="assets/logo-dlcf-futia-optimized.png" alt="DLCF Logo" />
+      <h2>DLCF FUTIA</h2>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <nav id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="events.html">Events</a>
+      <a href="media.html">Media</a>
+      <a href="contact.html">Contact</a>
+    </nav> 
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Find Purpose. Grow Spiritually. Belong to a Family.</h1>
+    <p>Welcome to DLCF FUTIA — where students encounter Christ, deepen their faith, and shine as lights on campus.</p>
+    <div class="buttons">
+      <a href="join.html" class="btn-primary">I'm New – Join Now</a>
+      <a href="events.html" class="btn-secondary">See Upcoming Programs</a>
+      <a href="devotional.html" class="btn-secondary" title="Coming Soon">Daily Devotion</a>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="feature">
+      <h2>📖 Weekly Bible Study</h2>
+      <p>Engage deeply with God’s Word and grow with fellow students every week.</p>
+    </div>
+    <div class="feature">
+      <h2>🎤 Spirit-Filled Retreats</h2>
+      <p>Experience powerful campus retreats that revive and renew your soul.</p>
+    </div>
+    <div class="feature">
+      <h2>🧍 New to DLCF?</h2>
+      <p>You're warmly welcome! Let us help you feel at home in our spiritual family.</p>
+    </div>
+    <div class="feature">
+      <h2>🙏 Need Prayer?</h2>
+      <p>We’re here to support you. Share your prayer needs — we’ll pray with you.</p>
+    </div>
+  </section>
+
+  <!-- WORD OF THE WEEK -->
+  <section class="word-of-week">
+    <h2>🧠 Word for the Week</h2>
+    <p id="word-of-week"><strong>Loading...</strong></p>
+    <p class="mini-reflection">This week, be intentional about reflecting Christ in how you speak, act, and serve others.</p>
+  </section>
+
+  <!-- SCRIPTURE -->
+  <section class="scripture" id="weekly-scripture">
+    <h2>📖 Scripture of the Week</h2>
+    <p id="scripture-text">Loading...</p>
+  </section>
+
+  <!-- PASTOR MESSAGE -->
+  <section class="pastor-message">
+    <h2>A Word from Our Campus Pastor</h2>
+    <audio controls>
+      <source src="pastor-message.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="student-testimonies">
+    <h2>💬 Student Testimonies</h2>
+    <div class="testimonial-box">
+      <p id="testimonial-text">"Since joining DLCF, my walk with God has grown stronger and more joyful!"</p>
+      <p id="testimonial-author"><strong>– John, 100 Level</strong></p>
+      <div class="testimonial-controls">
+        <button id="prevTestimony" title="Previous Testimony">⬅️</button>
+        <button id="nextTestimony" title="Next Testimony">➡️</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONY CTA -->
+  <section class="testimony-cta">
+    <h2>💬 Got a Testimony?</h2>
+    <p>Your story can inspire someone to follow Christ. Share what God has done through DLCF.</p>
+    <a href="form.html" class="btn-testimony">Share Your Testimony</a>
+  </section>
+
+  <!-- WHATSAPP FLOAT -->
+  <div class="whatsapp">
+    <a href="https://chat.whatsapp.com/JK7Fn9tEos8KuNcxqoocj0?mode=r_c" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- SCROLL TO TOP -->
+  <button id="scrollTopBtn" title="Go to top">⬆️</button>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; <span id="year">2024</span> Deeper Life Campus Fellowship FUTIA. All rights reserved.</p>
+    <p>Follow us:
+      <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a> |
+      <a href="https://chat.whatsapp.com/JK7Fn9tEos8KuNcxqoocj0?mode=r_c" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </p>
+  </footer>
+
+  <!-- SCRIPTURE + WORD SCRIPT -->
+  <script>
+    const scriptures = [
+      { verse: "Romans 12:2", text: "Do not conform to the pattern of this world, but be transformed by the renewing of your mind." },
+      { verse: "Matthew 5:14", text: "You are the light of the world. A city set on a hill cannot be hidden." },
+      { verse: "Philippians 4:13", text: "I can do all things through Christ who strengthens me." },
+      { verse: "Isaiah 40:31", text: "Those who wait on the Lord shall renew their strength." },
+      { verse: "Psalm 119:105", text: "Your word is a lamp to my feet and a light to my path." },
+      { verse: "2 Timothy 1:7", text: "God has not given us a spirit of fear, but of power and of love and of a sound mind." },
+      { verse: "John 15:5", text: "I am the vine; you are the branches. If you remain in me and I in you, you will bear much fruit." }
+    ];
+
+    const wordsOfWeek = [
+      "Faith over fear.",
+      "Walk in the light.",
+      "Stay rooted in Christ.",
+      "Let your light shine.",
+      "God is your strength.",
+      "Be salt and light.",
+      "Abide in the Word."
+    ];
+
+    const weekNumber = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 1)) / (7 * 24 * 60 * 60 * 1000));
+    const scriptureIndex = weekNumber % scriptures.length;
+    const wordIndex = weekNumber % wordsOfWeek.length;
+
+    const verse = scriptures[scriptureIndex];
+    const word = wordsOfWeek[wordIndex];
+
+    const scriptureText = document.getElementById("scripture-text");
+    if (scriptureText) {
+      scriptureText.innerHTML = `<strong>${verse.verse}</strong> — "${verse.text}"`;
+    }
+
+    const wordOfWeek = document.getElementById("word-of-week");
+    if (wordOfWeek) {
+      wordOfWeek.innerHTML = `<strong>${word}</strong>`;
+    }
+  </script>
+
+  <script src="general.js"></script>
+</body>
+</html>

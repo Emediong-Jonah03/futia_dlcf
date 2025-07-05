@@ -1,0 +1,156 @@
+.media-section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1, h2 {
+  color: #0C2340;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  margin-bottom: 1rem;
+}
+
+/* Section Styling */
+section {
+  margin-bottom: 3rem;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.4s ease;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  animation: zoomIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+
+/* Live Stream */
+.video-container iframe {
+  width: 100%;
+  height: 315px;
+  border-radius: 10px;
+  border: 2px solid #0C2340;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Audio and Video List */
+.media-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+audio, video {
+  width: 100%;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #0C2340;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  border: 4px solid white;
+}
+
+#closeLightbox {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Downloads */
+.download-btn,
+#download-list a {
+  display: inline-block;
+  background-color: #800000;
+  color: white;
+  font-weight: bold;
+  padding: 0.7rem 1.2rem;
+  margin: 0.5rem;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover,
+#download-list a:hover {
+  background-color: #FFCC00;
+  color: #0C2340;
+}
+
+/* Responsive Nav/Menu Fixes */
+@media (max-width: 768px) {
+  .media-section {
+    padding: 1rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .video-container iframe {
+    height: 250px;
+  }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media - DLCF FUTIA</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon-dlcf.ico" type="image/x-icon">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="media.css" />
+  <link rel="stylesheet" href="general.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="assets/logo-dlcf-futia-optimized.png" alt="DLCF Logo" />
+      <h2>DLCF FUTIA</h2>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <nav id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="media-section">
+    <h1>🎙️ Media Center</h1>
+
+    <!-- LIVE STREAM -->
+    <section class="live-stream">
+      <h2>🔴 Live Stream</h2>
+      <div class="video-container">
+        <iframe src="" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- AUDIO MESSAGES -->
+    <section class="audios">
+      <h2>🎧 Recent Audio Messages</h2>
+      <div class="media-list" id="audio-list"></div>
+    </section>
+
+    <!-- VIDEO MESSAGES -->
+    <section class="videos">
+      <h2>🎥 Featured Videos</h2>
+      <div class="media-list" id="video-list"></div>
+    </section>
+
+    <!-- PHOTO GALLERY -->
+    <section class="gallery">
+      <h2>📸 Photo Gallery</h2>
+      <div class="gallery-grid" id="gallery"></div>
+
+      <!-- Lightbox Viewer -->
+      <div id="lightbox" class="lightbox">
+        <span id="closeLightbox">×</span>
+        <img id="lightboxImage" src="" alt="Enlarged view">
+      </div>
+    </section>
+
+    <!-- DOWNLOADS -->
+    <section class="downloads">
+      <h2>📄 Downloadable Resources</h2>
+      <div id="download-list"></div>
+    </section>
+  </main>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" title="Go to top">⬆️</button>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Deeper Life Campus Fellowship FUTIA. All rights reserved.</p>
+    <p>Follow us on: <a href="#">Facebook</a></p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="general.js"></script>
+  <script src="media.js"></script>
+</body>
+</html>

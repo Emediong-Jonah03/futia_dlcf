@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join Us - DLCF FUTIA</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: 60px auto;
+      background-color: #0C2340;
+      padding: 30px;
+      border-radius: 16px;;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+    }
+    .join-form {
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      display: flex;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    input,
+    textarea {
+      width: 90%;
+      padding: 12px;
+      border-radius: 10px;
+      color: #000;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 70px;
+    }
+
+    button[type="submit"] {
+      background-color: #800000;
+      color: #fff;
+      padding: 12px 20px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 94%;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #a30000;
+    }
+
+    #success-message {
+      display: none;
+      text-align: center;
+      margin-top: 25px;
+      padding: 20px;
+      background-color: #0C2340;
+      border: 2px solid #fff;
+      border-radius: 12px;
+      color: #ffffff;
+    }
+
+    #whatsapp-link button {
+      background-color: #25D366;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 10px;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    #whatsapp-link button:hover {
+      background-color: #1ebc59;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Join the DLCF Family</h2>
+    <form id="join-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" required>
+
+      <label for="email">Email (optional)</label>
+      <input type="email" id="email">
+
+      <label for="dept">Department / Faculty (optional)</label>
+      <input type="text" id="dept">
+
+      <label for="reason">Why do you want to join? (optional)</label>
+      <textarea id="reason"></textarea>
+
+      <button type="submit">Join Now</button>
+    </form>
+
+    <div id="success-message">
+      🎉 You're now part of the DLCF FUTIA family!
+      <div id="whatsapp-link">
+        <a href="https://chat.whatsapp.com/JK7Fn9tEos8KuNcxqoocj0?mode=r_c" target="_blank">
+          <button>Join WhatsApp Group</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("join-form");
+    const successMessage = document.getElementById("success-message");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      form.reset();
+      successMessage.style.display = "block";
+      form.style.display = "none";
+    });
+  </script>
+
+</body>
+</html>
