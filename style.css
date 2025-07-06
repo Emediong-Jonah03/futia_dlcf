@@ -4,7 +4,10 @@ header h2 {
   display:flex;
   align-items: center;
   justify-content: space-between;
+}
 
+.logo {
+width: 29%
 }
 .hero {
   text-align: center;
