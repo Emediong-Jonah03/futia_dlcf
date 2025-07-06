@@ -1,5 +1,7 @@
 /* style.css */
-
+header h2 {
+  font-size: 1.2rem
+}
 .hero {
   text-align: center;
   background: linear-gradient(to right, #800000, #0C2340);
