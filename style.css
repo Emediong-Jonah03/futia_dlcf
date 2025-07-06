@@ -1,6 +1,10 @@
 /* style.css */
 header h2 {
-  font-size: 1.2rem
+  font-size: 1.2rem;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+
 }
 .hero {
   text-align: center;
